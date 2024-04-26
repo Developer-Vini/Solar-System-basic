@@ -1,0 +1,85 @@
+  <head>
+  <style>
+  body {
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.sistema-solar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.terra-circulo{
+    width: 450px;
+    height: 450px;
+    border: 2px solid #555555;
+    content: "";
+    border-radius: 300px;
+}
+
+/* */
+.sol{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #ffff00;
+    border-radius: 100px;
+    box-shadow: 0 0 50px #ffff00;
+}
+
+.terra{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: green;
+    top: -25px;
+    border-radius: 100px;
+    animation: 18s rotate linear infinite;
+    transform-origin: 30px 250px;
+}
+
+.lua-circulo{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border: 2px solid #555555;
+    top: -30px;
+    left: -30px;
+    content: "";
+    border-radius: 110px;
+}
+
+.lua{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ccc;
+    top: -40px; 
+    left: 15px;
+    border-radius: 50px;
+    animation: 1.5s rotate linear infinite;
+    transform-origin: 10px 65px;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+    
+  </style>
+</head>
+<div class="sistema-solar">
+    <div class="terra-circulo"></div>
+    <div class="sol"></div>
+    <div class="terra">
+        <div class="lua-circulo"></div>
+        <div class="lua"></div>
+    </div>
+</div>
